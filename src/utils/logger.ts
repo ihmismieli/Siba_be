@@ -5,7 +5,7 @@ We can use it to log events and errors that happen on the backend.
 It's possible to edit the logging formats and the logging levels.
 NPM: https://www.npmjs.com/package//winston
 */
-import { createLogger, format, transports } from 'winston';
+import { Logger, createLogger, format, transports } from 'winston';
 // const LEVEL = 'level';
 
 // Modifying the log for easier reading
@@ -22,17 +22,15 @@ const customFormat = format.combine(
 // Which log levels we want to show / see
 function filterOnly(level: string) {
   const LEVEL = 'level';
-  return format((info, http) => {
+  return format((info) => {
     if (info[LEVEL] === level) {
       return info;
     }
-    if (http[LEVEL] === level) {
-      return http;
-    }
+    return false;
   })();
 }
 
-const logger = createLogger({
+const logger: Logger = createLogger({
   format: customFormat,
   transports: [
     new transports.Console({ level: 'silly' }),
