@@ -53,7 +53,7 @@ Content-Type: application/json
     "sessionCount": 4,
     "area": 30,
     "programId": 3020,
-    "programName": "Test Program",
+    "isNoisy": 0,
     "allocRoundId": 10003
 }
 
@@ -76,6 +76,7 @@ Content-Type: application/json
     "area": 33,
     "programId": 3030,
     "spaceTypeId": 5004,
+    "isNoisy": 0,
     "allocRoundId": 10001
 }
 
