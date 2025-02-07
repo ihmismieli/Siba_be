@@ -34,9 +34,8 @@ Content-Type: application/json
     "sessionCount": 3,
     "area": 33,
     "programId": 3030,
-    "programName": "Test program name",
     "spaceTypeId": 5004,
-    "spaceTypeName": "Musiikkiluokka",
+    "isNoisy": 1,
     "allocRoundId": 10002
 }
 
