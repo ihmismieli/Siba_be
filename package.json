@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "tsc-watch --project . --outDir ./dist --onSuccess \"node ./dist/index.js\"",
+    "start": "tsc-watch --onSuccess \"node ./dist/index.js\"",
     "devStart": "nodemon ./dist/index.js",
     "production": "node ./dist/index.js &",
     "production2": "pm2 start dist/index.js",

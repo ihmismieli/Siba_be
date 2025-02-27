@@ -57,9 +57,15 @@ export interface Program {
   name: string;
 }
 
+// For POST end-point (Create)
 export interface ProgramWithDepartmentId {
   name: string;
   departmentId: number;
+}
+
+// For PUT end-point (Update)
+export interface ProgramBeingModified extends ProgramWithDepartmentId {
+  id: number;
 }
 
 export interface ProgramAllocation extends Program {
