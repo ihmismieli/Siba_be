@@ -48,7 +48,7 @@ function handleErrorBasedOnErrno(
   }
 }
 
-// get all buildings   server.com:4678/api/building/
+// get all buildings   GET server.com:4678/api/building/
 building.get(
   '/',
   [authenticator, admin, statist, planner, roleChecker, validate],
