@@ -16,6 +16,12 @@ List in order what middleware is added to handle the GET one building by id REST
 
 4. Encryption and decrypting with encryption libraries
 
-5. Validators
+5. Input data validation 
 
-6. 
+6. Database connection
+
+7. Database operation
+
+8. Logger creation and usage
+
+9. Response handling and writing back to client
