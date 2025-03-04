@@ -14,13 +14,15 @@ List in order what middleware is added to handle the GET one building by id REST
 
 3. Login of the user (basics)
 
-4. Encryption and decrypting with encryption libraries
+4. Encryption and decrypting with encryption library. case 1 - password hashing and checking hash 2nd time
+
+5. Encryption and decrypting with encryption library. case 2 - (authentication)/authorization token
 
 5. Input data validation 
 
-6. Database connection
+6. Database connection creation and connection pool
 
-7. Database operation
+7. Database operation when request comes in
 
 8. Logger creation and usage
 
