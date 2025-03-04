@@ -12,7 +12,10 @@ dotenv.config({});
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-// body JSON: {firstName:"Mike",email:"a@b.c"} => JS obj: req.body.firstName
+// Req body JSON: {firstName:"Mike",email:"a@b.c"}
+// with those middleware we get automatically
+// => JS object attached to the Req object: e.g. req.body.firstName
+
 app.use(`${process.env.BE_API_URL_PREFIX}`, routes);
 
 app.listen(process.env.BE_SERVER_PORT, () => {
