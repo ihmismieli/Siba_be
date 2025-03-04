@@ -10,7 +10,7 @@ List names of our own files that are called (not just something declared there, 
 
 2. Middleware attachment
 
-List in order what middleware is added to handle the GET one building by id REST API endpoint call (request coming in).
+List in order what middleware is added to handle the GET one building by id REST API endpoint call (Attached at server startup, used when request coming in).
 
 3. Login of the user (basics)
 
