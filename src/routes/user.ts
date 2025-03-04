@@ -177,6 +177,7 @@ user.get(
 // handling login for registered user
 user.post('/login', (req, res) => {
   console.log(`Login, password: ${req.body.password}`);
+
   db_knex('User')
     .select('id', 'email', 'password', 'isAdmin', 'isPlanner', 'isStatist')
     .where('email', req.body.email)
