@@ -81,6 +81,3 @@ How does the client try to login? Where are the user accounts defined? Where is/
 
 ## Notice
 Notice that all these questions are related to how things are supposed to be written in THIS case. That means all questions require reading THIS case code. Googling for answers would thus give wrong answers. Googling for hints or understanding is of course ok.
-
-
-
