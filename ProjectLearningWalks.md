@@ -10,7 +10,7 @@
 
 **Case:** Spring 2025 case to be studied is Siba backend (e.g. admin, planner, Building, Equipment)
 
-**Instructions how to set up the example**: 
+**Instructions how to set up the example**: https://github.com/haagahelia/Siba_be/blob/main/ProjectInstallationSteps.md 
 
 **Case repo link:** https://github.com/haagahelia/Siba_be
 
