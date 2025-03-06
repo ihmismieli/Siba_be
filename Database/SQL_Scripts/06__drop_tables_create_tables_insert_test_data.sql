@@ -489,7 +489,7 @@ INSERT INTO `Space` (`name`, `area`, `personLimit`, `buildingId`, `availableFrom
 
 /* --- Insert: Equipment --- */
 INSERT INTO `Equipment` (`name`, `isMovable`, `priority`, `description`) VALUES
-	('Urut', 0, 600, 'Valtavan kokoinen soitin'), -- 2001
+	('Urut', 0, 600, 'Bachin soitin'), -- 2001
 	('Kantele', 1, 50, 'Väinämöisen soitin'), -- 2002
     ('Nokkahuilu', 1, 50, 'Kaikki rakastaa'), -- 2003
     ('Rumpusetti', 1, 250, 'Ääntä riittää'), -- 2004
