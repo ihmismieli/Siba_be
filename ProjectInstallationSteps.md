@@ -34,7 +34,7 @@ Be careful with e.g. what folder you open/add/edit. It matters for the tools. Wo
 1. then find different line `POST {{host}}/subject` and press `Send request` above that. Now result should be `401 Unauthorized`. `Token found but NOT valid`.   (save SCREENSHOT to file `be3.png`)
 1. Open the file `1_Logins.rest` and send the `'email:admin, password:admin'` login request. From the response, copy the token value without copying the quotes, go to the `.vscode` folder `settings.json` file and paste the token carefully to `adminEnv` and Save
 1. Copy the very same token to `expiredTokenEnv` (not expired yet, but e.g. tomorrow it will be. Valid but expired). Save the file.
-1. Run the POST request again while `adminEnv` is active at bottom right corner. Works? (save SCREENSHOT to file `be4.png`)
+1. Run the failed POST subject request again while `adminEnv` is active at bottom right corner. Works now? (save SCREENSHOT to file `be4.png`)
 1. You could also login as `planner`, `statist` and `noroleuser` and copy those tokens to respective places.
 
 ## Frontend installation and test
