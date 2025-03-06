@@ -21,6 +21,10 @@
 1. Server startup
 
     * List the names of our own files that are called (not just declared) during the server startup. List them in the order they are called. Only include files from the src folder (e.g. "\routes\Building.ts" ).
+    * Can you identify everything that happens
+        1. when server set up and started?
+        2. when a request later comes in?
+        3. when asynchronous request to e.g. database has been completed and we would be ready to write response to client (e.g. data or an error)
 
 1. Middleware attachment
 
@@ -89,7 +93,9 @@
 1. Role-based method-level authorization
 
     * There are three roles in this case: admin, planner, statist. Locate all places in backend where those are touched
-    * 
+    * How do we know which roles each user should have?
+    * How does the BE know what roles current logged in user has?
+    * The role-based method-level authorization exists, but it requires the roleChecker AFTER the role setter middleware. Can you find out what happens if is missing? What is a potential problem in this working but not optimal solution?
 
 ## Submission
 
