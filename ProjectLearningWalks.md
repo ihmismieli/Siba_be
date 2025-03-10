@@ -28,6 +28,7 @@
 
 1. Middleware attachment
 
+    * Describe "Express middleware" in less than 12 words.
     * List the middleware added to handle the GET request for the "one building by id" REST API endpoint, in the order they are attached at server startup.
     * Note that Express accepts middleware as functions or arrays of functions (or arrays of arrays of middleware functions and so on).
     * But finally the last values found must be a (middleware) function. That makes attaching single (function) or multiple (array) middleware functions easy.
@@ -66,6 +67,10 @@
 1. Database operation when request comes in
 
     * Are any database operations started when those .get() .post() .delete() functions are called?
+    * What return value do we have for the get one / get many DB operations? How does the client get that value?
+    * What return value do we have for the delete or update (PUT)operations? How does the client get that value?
+    * What return value do we have for the insert (POST) operations? How does the client get that value?
+    * The database return error codes in case of errors. Find one place where the error code is used to decide what to do next, and some place where just the database error happening is used.
 
 1. Logger creation and usage
 
