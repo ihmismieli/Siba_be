@@ -30,3 +30,7 @@ Authorization: Basic <put your token here>
 ###
 GET http://localhost:8764/api/user
 Authorization: Basic <put your token here>
+
+### Sauna
+GET http://localhost:8764/api/sauna
+Authorization: Basic <put your token here>

@@ -341,6 +341,20 @@ export const createMultiFloatValidatorChain = (
     .bail(),
 ];
 
+export const createDateValidatorChain = (
+  fieldName: string,
+): ValidationChain[] => [
+  body(`*.${fieldName}`)
+    .matches(/^\d{4}-\d{2}-\d{2}$/) // DATE in form YYYY-MM-DD
+    .withMessage('Date must be in the format YYYY-MM-DD')
+    .bail()
+    .isISO8601()
+    .toDate()
+    .notEmpty()
+    .withMessage('Date cannot be empty')
+    .bail(),
+];
+
 export const validateIdObl = [...createIdValidatorChain('id')];
 
 export const validateNameObl = [...createNameValidatorChain('name')];

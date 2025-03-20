@@ -79,3 +79,15 @@ Content-Type: application/json
   "inUse": true,
   "spaceTypeId": 5001
 }
+
+### Sauna
+POST http://localhost:8764/api/sauna
+Authorization: Basic <put your token here>
+Content-Type: application/json
+
+{
+  "name": "Höyrysauna",
+  "opened": "2015-03-02",
+  "temperature" : 60,
+  "isPublic" : true
+}

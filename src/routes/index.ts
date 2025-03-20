@@ -7,6 +7,7 @@ import departmentplanner from './departmentplanner.js';
 import equipment from './equipment.js';
 import program from './program.js';
 import resetDatabase from './resetDatabase.js';
+import sauna from './sauna.js';
 import setting from './setting.js';
 import space from './space.js';
 import spaceequipment from './spaceEquipment.js';
@@ -34,5 +35,6 @@ routes.use('/user', user);
 routes.use('/departmentplanner', departmentplanner);
 routes.use('/template', template);
 routes.use('/resetDatabase', resetDatabase);
+routes.use('/sauna', sauna);
 
 export default routes;

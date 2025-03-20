@@ -251,6 +251,19 @@ CREATE TABLE IF NOT EXISTS SubjectEquipment (
         ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+/* CREATE SAUNA TABLE */
+
+CREATE TABLE IF NOT EXISTS Sauna (
+    id          INTEGER      NOT NULL AUTO_INCREMENT,
+    name        VARCHAR(255) NOT NULL,
+    opened      DATE         NOT NULL,
+    temperature DECIMAL(3,1) NOT NULL,
+    isPublic    BOOLEAN      NOT NULL,
+
+    PRIMARY KEY(id)
+) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=latin1;
+
+
 
 /* CREATE ALLOC TABLES */
 
@@ -782,6 +795,14 @@ INSERT INTO AllocSubject(subjectId, allocRoundId, isAllocated, allocatedDate, pr
     (4005, 10003, 0, '2022-09-21', 5),
     (4006, 10003, 0, '2022-09-21', 6),
     (4007, 10003, 0, '2022-09-21', 7);
+
+/* INSERT SAUNA TEST DATA */
+
+INSERT INTO Sauna (name, opened, temperature, isPublic) VALUES
+    ('Sauna', '2025-01-01', 80, FALSE),
+    ('Löyly', '2025-03-01', 70, TRUE),
+    ('Allas Seapool Sauna', '2022-10-10', 75, TRUE),
+    ('Rantasauna', '2020-03-25', 90, FALSE);
 
 INSERT INTO AllocSpace(subjectId, allocRoundId, spaceId, totalTime) VALUES
     (4011, 10002, 1020, 16200), -- Urkujensoitto 1ppl/ N419 urkuluokka, 34m2, 5ppl

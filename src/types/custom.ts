@@ -89,3 +89,11 @@ export interface RoomsByAllocId {
   requiredHours: string;
   spaceTypeId: string;
 }
+
+export interface Sauna {
+  id: number;
+  name: string;
+  opened: Date;
+  temperature: number;
+  isPublic: boolean;
+}
