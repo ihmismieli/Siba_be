@@ -344,7 +344,7 @@ export const createMultiFloatValidatorChain = (
 export const createDateValidatorChain = (
   fieldName: string,
 ): ValidationChain[] => [
-  body(`*.${fieldName}`)
+  body(`${fieldName}`)
     .matches(/^\d{4}-\d{2}-\d{2}$/) // DATE in form YYYY-MM-DD
     .withMessage('Date must be in the format YYYY-MM-DD')
     .bail()

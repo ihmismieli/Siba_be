@@ -4,7 +4,22 @@
 GET {{host}}/sauna
 Authorization: Basic {{token}}
 
-### 3. Create new sauna (Assume that the created sauna gets `nextId` or should be replaced with a returned ID to continue with the test)
+### 2. Get all saunas that contains letter s
+GET {{host}}/sauna/contains-s
+Authorization: Basic {{token}}
+
+### 3. GET Saunas with given date 
+
+POST {{host}}/sauna/recent
+Authorizarion: Basic {{token}}
+
+{
+  "date": "2024-01-01"
+}
+
+
+
+### 3. Create a new sauna (Assume that the created sauna gets `nextId` or should be replaced with a returned ID to continue with the test)
 POST {{host}}/sauna
 Authorization: Basic {{token}}
 Content-Type: application/json
@@ -13,5 +28,6 @@ Content-Type: application/json
     "name": "Taloyhtiön sauna",
     "opened": "1996-08-08",
     "temperature": 92,
-    "isPublic": false
+    "isPublic": 0
 }
+

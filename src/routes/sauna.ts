@@ -33,6 +33,26 @@ sauna.get(
   },
 );
 
+sauna.get(
+  '/sauna/contains-s',
+  [authenticator, admin, planner, statist, roleChecker, validate],
+  (req: Request, res: Response) => {
+    db_knex('Sauna')
+      .where('name', 'like', '%s%')
+      .then((data) => {
+        successHandler(
+          req,
+          res,
+          data,
+          'getAll saunas that contains letter s - Sauna',
+        );
+      })
+      .catch((error) => {
+        dbErrorHandler(req, res, error, 'Oops! Nothing came through - Sauna');
+      });
+  },
+);
+
 sauna.post(
   '/',
   validateSaunaPost,
@@ -47,6 +67,27 @@ sauna.post(
       })
       .catch((error) => {
         dbErrorHandler(req, res, error, 'Oops! Create failed - sauna');
+      });
+  },
+);
+
+sauna.post(
+  '/recent',
+  [authenticator, admin, planner, roleChecker, validate],
+  (req: Request, res: Response) => {
+    const { date } = req.body;
+    db_knex('Sauna')
+      .where('opened', '>', date)
+      .then((data) => {
+        successHandler(
+          req,
+          res,
+          data,
+          `Saunas newer than ${date} retrieved successfully`,
+        );
+      })
+      .catch((error) => {
+        dbErrorHandler(req, res, error, 'Oops! Failed to fetch saunas');
       });
   },
 );
